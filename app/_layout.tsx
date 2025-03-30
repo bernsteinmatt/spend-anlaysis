@@ -1,7 +1,32 @@
+// import { useFonts } from 'expo-font';
+// import { Stack } from 'expo-router';
+// // import * as SplashScreen from 'expo-splash-screen';
+// import { useEffect } from 'react';
+//
+// // SplashScreen.preventAutoHideAsync();
+//
+// export default function RootLayout() {
+//   const [loaded] = useFonts({
+//     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+//   });
+//
+//   useEffect(() => {
+//     if (loaded) {
+//       // SplashScreen.hideAsync();
+//     }
+//   }, [loaded]);
+//
+//   if (!loaded) {
+//     return null;
+//   }
+//
+//   return <Stack />;
+// }
+
 import { ScreenContent } from 'components/ScreenContent';
 import { StatusBar } from 'expo-status-bar';
 //
-import './global.css';
+import '../global.css';
 //
 // export default function App() {
 //   return (
@@ -17,8 +42,8 @@ import { Session } from '@supabase/supabase-js';
 import { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
 
-import Auth from './components/Auth';
-import { supabase } from './lib/supabase';
+import Auth from '../components/Auth';
+import { supabase } from '../lib/supabase';
 
 export default function App() {
   const [session, setSession] = useState(null);
@@ -41,3 +66,4 @@ export default function App() {
     </View>
   );
 }
+
